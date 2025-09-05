@@ -24,6 +24,12 @@ export def "scoop search" [$args] {
   scoop-search $args
 }
 
+export def copypath [path?: string] {
+  let target = if ($path == null) { pwd } else { $path }
+  let abs = ($target | path expand)
+  $abs | clip
+  print $"($abs) copied to clipboard."
+}
 
 # TODO
 # nvim_configs
