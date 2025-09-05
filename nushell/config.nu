@@ -1,4 +1,4 @@
-overlay use ./modules/config.nu as config
+overlay use ./modules/config.nu
 overlay use ./modules/ohmyposh_load.nu
 overlay use ./modules/from_pwsh_config.nu
 
