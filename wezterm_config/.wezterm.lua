@@ -58,9 +58,13 @@ config.max_fps = 120
 -- 	"-NoLogo",
 -- }
 
+-- config.default_prog = {
+-- 	"pwsh.exe",
+-- 	"-NoLogo",
+-- }
+
 config.default_prog = {
-	"pwsh.exe",
-	"-NoLogo",
+	"nu",
 }
 
 config.window_frame = {
