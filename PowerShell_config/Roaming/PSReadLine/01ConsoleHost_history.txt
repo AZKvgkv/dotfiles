@@ -1,0 +1,477 @@
+f
+vi
+scoop update *
+scoop cache rm *
+scoop cleanup -a
+notepad $profile
+z C:\Users\AZK19\OneDrive\桌面\
+Measure-Command { . $PROFILE }
+ns
+c
+Measure-Command { . $PROFILE }
+alacritty
+scoop update *
+scoop cache rm *
+scoop cleanup -a
+c
+pypy
+c
+f
+c
+f
+c
+ls
+c
+z C:\Users\AZK19\OneDrive\桌面\
+ll
+c
+Measure-Command { . $PROFILE }
+scoop update *
+scoop cache rm *
+scoop cleanup -a
+c
+ns
+c
+z C:\Users\AZK19\OneDrive\桌面\
+c
+vi .\.config\starship.toml 
+c
+notepad $profile
+Measure-Command { . $PROFILE }
+Measure-Command { . $PROFILE }
+z C:\Users\AZK19\OneDrive\桌面\
+c
+Measure-Command { . $PROFILE }
+scoop update *
+scoop cache rm *
+c
+scoop cleanup -a
+scoop update *
+scoop cache rm *
+scoop cleanup -a
+c
+scoop update *
+c
+uv python list
+c
+uv python list
+uv python install 3.14
+uv python install cpython-3.14.0a6-windows-x86_64-none
+uv python install cpython-3.14.0a6+freethreaded-windows-x86_64-none
+uv python uninstall cpython-3.14.0a5-windows-x86_64-none cpython-3.14.0a5+freethreaded-windows-x86_64-none
+c
+uv python list
+uv python dir
+uv cache clean 
+uv cache prune 
+uv python list
+uvx list
+uvx dir
+c
+scoop cache rm *
+scoop cleanup -a
+c
+scoop install affine
+scoop install notion
+scoop uninstall notion
+which python
+scoop which python
+ipython
+code
+c
+python
+pip install matplotlib
+python -m pip install --upgrade pip
+pip list
+julia
+scoop update *
+f
+c
+scoop cache rm *
+scoop cleanup -a
+scoop update *
+scoop cache rm *
+scoop cleanup -a
+c
+oh-my-posh get shell
+pip install marimo
+c
+pip list
+marimo tutorial intro
+powercfg -h on
+scoop uninstall notion
+D:\Applications\Scoop\apps\notion\current\
+cd D:\Applications\Scoop\apps\notion\current\
+f
+scoop update *
+scoop status
+nu
+c
+Measure-Command { . $PROFILE }
+nu 
+cls
+ns
+yz
+ns
+neovide
+dism /Online /cleanup-image /scanhealth
+DISM /Online /cleanup-image /scanhealth
+DISM /Online /cleanup-image /checkhealth
+DISM /Online /cleanup-image /restorehealth
+notepad $profile
+DISM /Online /cleanup-image /restorehealth
+DISM /Online /cleanup-image /scanhealth
+DISM /Online /cleanup-image /checkhealth
+DISM /Online /cleanup-image /restorehealth
+sfc scannow
+sfc /scannow
+nvim
+nvim --version
+scoop which nvim
+nvim
+ns
+c
+git clone https://github.com/LazyVim/starter $env:LOCALAPPDATA\nvim
+Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
+nvim
+ns
+nvim
+c
+ns
+notepad $profile
+M
+Measure-Command { . $PROFILE }
+c
+ns
+z C:\Users\AZK19\AppData\
+yz
+c
+nvim
+c
+scoop cache rm *
+scoop cleanup -a
+scoop uninstall vscodium
+scoop cache rm *
+scoop cleanup -a
+c
+scoop install vscodium
+c
+scoop install vscodium
+vscodium
+c
+ls
+c
+notepad $profile
+Get-ChildItem -Directory | Group-Object Name | Where-Object Count -gt 1 | Select-Object -ExpandProperty Name
+yz
+z C:\Users\AZK19\OneDrive\桌面\
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+starship preset jetpack -o ~/.config/starship.toml
+c
+starship preset pure-preset -o ~/.config/starship.toml
+c
+nvim -o ~/.config/starship.toml
+nvim  ~/.config/starship.toml
+c
+nvim  ~/.config/starship.toml
+c
+ls
+c
+cd D:\Applications\Scoop\apps\notion\current\
+z C:\Users\AZK19\OneDrive\桌面\
+z D:\!Workbenches\HP_Code\zig_learning\
+c
+ls
+cd .\exercises\
+ls
+cd .\exercises\
+ls
+c
+nvim  ~/.config/starship.toml
+c
+f
+c
+cd D:\!Workbenches\HP_Code\
+ls
+cd .\v_learning\
+ls
+cd .\vlang-project\
+ls
+cd .\part01\
+ls
+cd ~
+yz
+starship preset no-runtime-versions -o ~/.config/starship.toml
+c
+nvim  ~/.config/starship.toml
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+c
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+c
+nvim  ~/.config/starship.toml
+c
+yz
+c
+nvim  ~/.config/starship.toml
+c
+nvim  ~/.config/starship.toml
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+nvim  ~/.config/starship.toml
+c
+z C:\Users\AZK19\OneDrive\桌面\
+c
+yz
+which bun
+bun --version
+c
+z C:\Users\AZK19\OneDrive\桌面\
+cd D:\Applications\Scoop\apps\zig\current\
+c
+Measure-Command { . $PROFILE }
+c
+cd D:\Applications\Scoop\apps\zig\current\
+ls
+cd D:\!Workbenches\HP_Code\
+c
+ls
+cd .\zig_learning\exercises\
+ls
+cd .\exercises\
+pwd
+cd D:\!Workbenches\HP_Code\zig_learning\exercises\exercises
+c
+Measure-Command { . $PROFILE }
+c
+Measure-Command { . $PROFILE }
+c
+Measure-Command { . $PROFILE }
+c
+Measure-Command { . $PROFILE }
+c
+scoop cache rm *
+scoop cleanup -a
+oh-my-posh get shell
+c
+nvim
+cd D:\!Workbenches\HP_Code\zig_learning\exercises\exercises
+ls
+c
+cd ~
+ls
+c
+Measure-Command { . $PROFILE }
+c
+scoop update *
+Measure-Command { . $PROFILE }
+c
+scoop update *
+c
+scoop cache rm *
+scoop cleanup -a
+c
+scoop install extras/zed
+Measure-Command { . $PROFILE }
+yz D:\!Workbenches\
+onyx --version
+c
+Measure-Command { . $PROFILE }
+scoop install extras/zed
+zed
+c
+Measure-Command { . $PROFILE }
+c
+cmd
+c
+ls
+c
+nu
+zed .
+zed
+python .\array.py 
+scoop uninstall extras/zed
+c
+scoop cache rm *
+scoop cleanup -a
+c
+cd ~
+yz
+scoop cache rm *
+c
+scoop install extras/sublime-text
+subl
+c
+scoop update *
+c
+scoop update *
+c
+scoop search odin
+scoop bucket add versions
+scoop install versions/odin
+scoop install versions/odin-dev
+scoop uninstall versions/odin-dev
+scoop cache rm *
+scoop uninstall odin-nightly
+scoop install odin
+odin version
+scoop install versions/odin-dev
+scoop uninstall odin
+scoop install odin-nightly
+scoop cache rm *
+scoop cleanup -a
+c
+scoop install versions/odin-nightly
+yz D:\Applications\
+scoop install versions/odin-nightly
+nvim  ~/.config/starship.toml
+scoop install versions/odin-nightly
+nvim  ~/.config/starship.toml
+c
+nvim  ~/.config/starship.toml
+scoop install versions/odin-nightly
+scoop cache rm odin-nightly
+scoop install versions/odin-nightly
+scoop update
+scoop update apps
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+c
+scoop install versions/odin-nightly
+c
+nvim  ~/.config/starship.toml
+c
+Measure-Command { . $PROFILE }
+c
+scoop install versions/odin-nightly
+scoop bucket add versions
+scoop bucket rm versions
+scoop bucket add versions
+scoop install odin-nightly
+c
+scoop install D:\Applications\Scoop\apps\odin-nightly\2025-04-18\odin-windows-amd64-nightly+2025-04-18.zip 
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+scoop install D:\Applications\Scoop\apps\odin-nightly\2025-04-18\odin-windows-amd64-nightly+2025-04-18.zip 
+c
+scoop update *
+odin
+c
+odin
+c
+scoop install odin-nightly
+odin version
+c
+wsl --list -v
+wsl --unregister Fedora
+c
+wsl list
+wsl --list --online
+c
+wsl --install archlinux
+c
+wsl --install archlinux
+wsl --unregister Arch
+wsl --update
+net stop LxssManager
+net start LxssManager
+c
+wsl --install archlinux
+wsl --list --all
+wsl --unregister archlinux
+wsl --list --all
+wsl --unregister
+wsl --unregister --help
+c
+wsl --list --all
+wsl -d archlinux
+wsl --unregister archlinux
+net stop LxssManager
+net start LxssManager
+c
+wsl --list --all
+wsl --unregister archlinux
+wsl --unregister Arch
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --version
+net stop LxssManager
+c
+net stop LxssManager
+wsl --unregister archlinux
+regedit
+Measure-Command { . $PROFILE }
+c
+wsl --list --all
+wsl --install archlinux
+wsl --list --online
+wsl --install archlinux
+regedit
+wsl --install Debian
+wsl --list --online
+wsl --install -d Debian
+regedit
+Measure-Command { . $PROFILE }
+c
+ls
+c
+Measure-Command { . $PROFILE }
+c
+z C:\Users\AZK19\桌面\
+c
+ls
+ll
+c
+cd ~
+ll
+ls
+c
+vim
+c
+vim
+vi
+gvim
+Measure-Command { . $PROFILE }
+cd ~
+Measure-Command { . $PROFILE }
+c
+vi
+cd ~
+Install-Module posh-git
+Install-Module -Name z
+Install-Module -Name Terminal-Icons
+Install-Module -Name PSReadLine
+Install-Module -Name PowerShellGet
+c
+z
+c
+bat
+which bat
+notepad $profile
+Measure-Command { . $PROFILE }
+which fzf
+scoop which fzf
+c
+Import-Module DirColors Terminal-Icons
+Install-Module -Name Terminal-Icon
+Install-Module -Name Terminal-Icons
+clear
+cd ~
+Measure-Command { . $PROFILE }
+c
+f
+c
+ld
+ls
+ll
+c
+Install-Module -Name Terminal-Icons
+Import-Module DirColors
+Import-Module DirColor
+notepad $profile
+Install-Module DirColors -Scope CurrentUser
+echo $profile
+notepad $profile
+scoop which oh-my-posh
+Get-Poshtheme
+Get-PoshThemes
+copypath
+notepad $profile
+note
+notepad $profile
