@@ -4,9 +4,9 @@ if ($env.config? | is-not-empty) {
 }
 
 $env.POWERLINE_COMMAND = 'oh-my-posh'
-$env.POSH_THEME = (echo "C:\\Users\\AZK19\\application\\scoop\\apps\\oh-my-posh\\current\\themes\\robbyrussell.omp.json")
+$env.POSH_THEME = (echo "C:\\Users\\AZK19\\Develop\\dotfiles\\ohmyposh_themes\\amro.omp.json")
 $env.PROMPT_INDICATOR = ""
-$env.POSH_SESSION_ID = "ab784142-1c53-4570-857a-44b1b51fd4f3"
+$env.POSH_SESSION_ID = "1e4c1be4-5bf3-4b81-b85e-e9b82da8520a"
 $env.POSH_SHELL = "nu"
 $env.POSH_SHELL_VERSION = (version | get version)
 

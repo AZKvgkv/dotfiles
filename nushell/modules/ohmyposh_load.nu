@@ -27,15 +27,16 @@ export-env {
   let pure = ($omp_theme_path | path join "pure.omp.json")
 
 
-  let probua = ($omp_theme_path | path join "probua.omp.json")
+  let probua_minial = ($omp_theme_path | path join "probua.minimal.omp.json")
   let space = ($omp_theme_path | path join "space.omp.json")
   let spaceship = ($omp_theme_path | path join "spaceship.omp.json")
 
-  oh-my-posh init nu --config $robbyrussell
+  # oh-my-posh init nu --config $space
 
   # oh-my-posh init nu --config ~/Application/Scoop/apps/oh-my-posh/current/themes/zash.omp.json
 
   ## az_config
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/sorin.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/onehalf.minimal.omp.json
+  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/amro.omp.json
 }
