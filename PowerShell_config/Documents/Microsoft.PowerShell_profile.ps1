@@ -102,7 +102,7 @@ function ns {
 
     # 如果没有指定配置，使用 fzf 列出所有配置（显示全名）
     if (-not $Config) {
-        $Config = $script:nvimConfigNames.Values | fzf --prompt=" 󰔰  AZ's Config 󰶻 " --height=~50% --layout=reverse --border --exit-0
+        $Config = $script:nvimConfigNames.Values | fzf --prompt=" 󰔰  AZ's Config 󰶻 " --height=~70% --layout reverse --border --exit-0
     }
 
     # 如果配置是简写，映射到完整名称
