@@ -7,7 +7,7 @@
         {
           "foreground": "#45F1C2",
           "style": "plain",
-          "template": "\ueb99 {{ .UserName }} on",
+          "template": "\uf1d8 {{ .UserName }} on",
           "type": "session"
         },
         {
@@ -17,7 +17,7 @@
             "style": "full"
           },
           "style": "plain",
-          "template": " \uf07b {{ .Path }} ",
+          "template": " \uf4d4 {{ .Path }} ",
           "type": "path"
         },
         {
@@ -46,7 +46,7 @@
         {
           "foreground": "#CD4277",
           "style": "plain",
-          "template": "# ",
+          "template": "\uf46b ",
           "type": "text"
         }
       ],
