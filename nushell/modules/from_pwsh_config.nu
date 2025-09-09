@@ -16,6 +16,17 @@ export alias lt = lsd --tree
 export alias ltd = lt --depth
 export alias ls = ls -al
 
+export def scoop_update_status [] {
+    scoop update
+    scoop status
+}
+export def scoop_cache_clean [] {
+    scoop cache rm *
+    scoop cleanup -a
+}
+export alias suss = scoop_update_status
+export alias scc = scoop_cache_clean
+
 export def ss [$name] {
     scoop-search $name
 }
