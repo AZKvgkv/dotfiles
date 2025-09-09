@@ -278,7 +278,8 @@ format = "[$symbol($version )]($style)"
 symbol = "pijul "
 
 [pixi]
-symbol = "pixi "
+# symbol = "pixi "
+symbol = "pixi 󰏗 "
 format = "[$symbol($version )]($style)"
 
 [pulumi]
