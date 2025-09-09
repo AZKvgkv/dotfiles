@@ -31,3 +31,18 @@ export-env {
   }
 }
 
+# 查询历史命令
+# hist 命令：默认 20 条，可加数字或关键字
+export def hist [
+    n?: int = 20,          # 显示条数
+    --rg: string = ""    # 可选过滤关键字
+] {
+    let db = $"($nu.config-path | path dirname)/history.sqlite3"
+    let sql = if $rg == "" {
+        $"select command_line from history order by start_timestamp desc limit ($n)"
+    } else {
+        $"select command_line from history where command_line like '%($rg)%'
+          order by start_timestamp desc limit ($n)"
+    }
+    open $db | query db $sql
+}
