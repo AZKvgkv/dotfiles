@@ -2,3 +2,7 @@ PowerShell_config/Roaming/PSReadline/ConsoleHost_history.txt
 nushell/history*
 nushell/plugin*
 .jj/
+neovim_configs/*-data/
+neovim_configs/*/lazy-lock.json
+neovim_configs/*/doc/
+neovim_configs/*/*.log
