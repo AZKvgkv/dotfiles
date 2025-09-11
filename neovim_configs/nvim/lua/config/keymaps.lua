@@ -106,12 +106,6 @@ if vim.g.vscode then
     vscode.action("workbench.action.splitEditorRight")
   end)
 
-  -- add selection to next find match
-  -- TODO: 这个快捷键没有按我的预期起作用
-  -- keymap({ "n", "v" }, "<leader>m", function()
-  --   vscode.action("editor.action.addSelectionToNextFindMatch")
-  -- end, { desc = "Add Next Selection" })
-
   -- Code Actions
   keymap({ "n", "x" }, "<leader>r", function()
     vscode.action("editor.action.refactor")
