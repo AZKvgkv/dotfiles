@@ -1,5 +1,7 @@
 [manager]
 show_hidden = true
+ratio = [1, 2, 5]
+sort_by = "natural"
 
 [opener]
 edit = [
