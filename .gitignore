@@ -14,6 +14,8 @@ neovim_configs/*/lazy-lock.json
 neovim_configs/*/doc/
 neovim_configs/*/*.log
 
+PowerShell_config/Documents/profile.txt
+PowerShell_config/Documents/_*
 PowerShell_config/Documents/Modules/Az*
 PowerShell_config/Documents/Modules/Completion*
 PowerShell_config/Documents/Modules/Microsoft*
