@@ -27,7 +27,7 @@
             "fetch_upstream_icon": true
           },
           "style": "plain",
-          "template": "{{ .UpstreamIcon }} {{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": "{{ if regexMatch \"github\" .UpstreamURL }}\uf408 {{ else if regexMatch \"gitlab\" .UpstreamURL }}\uf296 {{ else if regexMatch \"bitbucket\" .UpstreamURL }}\uf171 {{ else }}\udb80\udea2 {{ end }} {{ .HEAD }}{{ if gt .StashCount 0 }} \uf01c{{ end }}",
           "type": "git"
         }
       ],
