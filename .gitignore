@@ -1,4 +1,7 @@
 PowerShell_config/Roaming/PSReadline/ConsoleHost_history.txt
+PowerShell_config/Roaming/PSReadline/01ConsoleHost_history.txt
+PowerShell_config/Roaming/PSReadline/_ConsoleHost_history.txt
+PowerShell_config/Roaming/PSReadline/*_history.txt
 nushell/history*
 nushell/plugin*
 .jj/
