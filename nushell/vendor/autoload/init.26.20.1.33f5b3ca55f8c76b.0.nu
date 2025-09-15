@@ -6,7 +6,7 @@ if ($env.config? | is-not-empty) {
 $env.POWERLINE_COMMAND = 'oh-my-posh'
 $env.POSH_THEME = (echo "C:\\Users\\AZK19\\Develop\\dotfiles\\ohmyposh_themes\\amro.omp.json")
 $env.PROMPT_INDICATOR = ""
-$env.POSH_SESSION_ID = "1e4c1be4-5bf3-4b81-b85e-e9b82da8520a"
+$env.POSH_SESSION_ID = "41bd565c-27ad-47de-bac0-d716a971f90a"
 $env.POSH_SHELL = "nu"
 $env.POSH_SHELL_VERSION = (version | get version)
 
