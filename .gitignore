@@ -1,10 +1,14 @@
+.jj/
+
 PowerShell_config/Roaming/PSReadline/ConsoleHost_history.txt
 PowerShell_config/Roaming/PSReadline/01ConsoleHost_history.txt
 PowerShell_config/Roaming/PSReadline/_ConsoleHost_history.txt
 PowerShell_config/Roaming/PSReadline/*_history.txt
+PowerShell_config/Roaming/AzPredictor/*
+
 nushell/history*
 nushell/plugin*
-.jj/
+
 neovim_configs/*-data/
 neovim_configs/*/lazy-lock.json
 neovim_configs/*/doc/
