@@ -10,7 +10,7 @@ success_symbol = "[\uf124](bold green)" # 
 error_symbol = "[󱣀](bold red)"
 
 # vimcmd_symbol = "[<](bold green)"
-vimcmd_symbol = "[\ue62b](bold green)"# 
+vimcmd_symbol = "[\ue62b](bold green)" # 
 # vimcmd_symbol = "[\uf060](bold green)"# 
 
 [git_branch]
@@ -49,9 +49,8 @@ stashed = '[ ](cyan)'
 untracked = '[ ](bold white)'
 modified = '[✱](blue) '
 conflicted = '[═](yellow)'
-diverged = '' 
+diverged = ''
 # up_to_date = ''
-# up_to_date = ' '
 up_to_date = '[ ](green)'
 
 [aws]
@@ -278,6 +277,7 @@ format = "[$symbol($version )]($style)"
 symbol = "pijul "
 
 [pixi]
+disabled = true # too slowly
 # symbol = "pixi "
 symbol = "pixi 󰏗 "
 format = "[$symbol($version )]($style)"
