@@ -16,6 +16,7 @@ keymap("n", "+", "<C-a>", opts)
 keymap("n", "-", "<C-x>", opts)
 
 keymap("i", "jk", "<Esc>", opts)
+keymap("i", "kk", "<Esc>:w<CR>", opts)
 
 -- Delete a word backwards
 keymap("n", "dw", "vb_d", opts)
