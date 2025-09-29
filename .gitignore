@@ -8,7 +8,7 @@ PowerShell_config/Roaming/AzPredictor/*
 
 nushell/history*
 nushell/plugin*
-nushell/vendor/autoload/*
+nushell/vendor/autoload/*.nu
 
 neovim_configs/*-data/
 neovim_configs/*/lazy-lock.json
