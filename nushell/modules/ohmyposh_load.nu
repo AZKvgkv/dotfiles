@@ -38,5 +38,6 @@ export-env {
   ## az_config
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/sorin.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/onehalf.minimal.omp.json
-  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/amro.omp.json
+  # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/amro.omp.json
+  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/tokyonight_storm.omp.json
 }
