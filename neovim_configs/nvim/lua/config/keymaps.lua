@@ -49,7 +49,7 @@ keymap("n", "<leader>-", "<CMD>split<CR>", opts)
 keymap("n", "<leader>\\", "<CMD>vsplit<CR>", opts)
 
 -- toggle color between 雷姆蓝 和 拉姆粉
-local color_switch = 1
+local color_switch = 0
 local function toggle_color()
   if color_switch == 1 then
     color_switch = 0
