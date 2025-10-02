@@ -124,6 +124,7 @@ function ns {
 
 #Import-Module posh-git
 #Import-Module Az.Tools.Predictor #暂时先不用
+
 Import-Module -Name CompletionPredictor
 Set-PSReadLineOption -EditMode Emacs `
                      -PredictionSource HistoryAndPlugin `
