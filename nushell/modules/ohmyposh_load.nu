@@ -34,15 +34,17 @@ export-env {
   # oh-my-posh init nu --config $space
   # oh-my-posh init nu --config $the_unnamed
   # oh-my-posh init nu --config $star
+  # oh-my-posh init nu --config $avit
 
   # oh-my-posh init nu --config ~/Application/Scoop/apps/oh-my-posh/current/themes/zash.omp.json
 
   ## az_config
   # let az_omp_path = '~/Develop/dotfiles/ohmyposh_themes/'
-  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/star.omp.json
+  # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/star.omp.json
 
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/sorin.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/onehalf.minimal.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/amro.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/tokyonight_storm.omp.json
+  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/craver.omp.json
 }

@@ -6,3 +6,6 @@ source ~/.zoxide.nu
 
 # Initialize oh-my-posh.nu at shell startup by adding this line in your config.nu file
 source ~/.oh-my-posh.nu
+
+# Init atuin
+source ./modules/atuin/init.nu
