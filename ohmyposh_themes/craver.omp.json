@@ -17,7 +17,7 @@
           "foreground": "#3A86FF",
           "leading_diamond": " ",
           "style": "diamond",
-          "template": " {{ if .WSL }}WSL at {{ end }} ",
+          "template": " {{ if .WSL }}WSL at {{ end }} ",
           "type": "os"
         },
         {
