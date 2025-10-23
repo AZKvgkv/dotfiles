@@ -126,6 +126,7 @@ function ns {
 #Import-Module Az.Tools.Predictor #暂时先不用
 
 Import-Module -Name CompletionPredictor
+Import-Module gsudoModule
 Set-PSReadLineOption -EditMode Emacs `
                      -PredictionSource HistoryAndPlugin `
                      -PredictionViewStyle ListView `
