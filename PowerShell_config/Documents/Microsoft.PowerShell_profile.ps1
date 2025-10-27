@@ -46,6 +46,8 @@ if (-not (Test-Path env:STARSHIP_SHELL)) {
 
 
 # 自定义函数
+${function:az} = {ns az $args}
+
 ${function:e} = { eza -Al $args }
 ${function:l} = { lsd $args }
 ${function:ll} = { lsd -Al $args }
