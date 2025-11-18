@@ -25,7 +25,7 @@
             }
           },
           "style": "plain",
-          "template": " \uf489 {{ .Name }}",
+          "template": " \udb82\udce8 {{ .Name }}",
           "type": "shell"
         },
         {
@@ -53,14 +53,18 @@
       "segments": [
         {
           "foreground": "#b8ff75",
-          "foreground_templates": ["{{ if gt .Code 0 }}#E06C75{{ end }}"],
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#E06C75{{ end }}"
+          ],
           "style": "plain",
           "template": " x{{ reason .Code }}",
           "type": "status"
         },
         {
           "foreground": "#b8ff75",
-          "foreground_templates": ["{{ if gt .Code 0 }}#E06C75{{ end }}"],
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#E06C75{{ end }}"
+          ],
           "properties": {
             "always_enabled": true,
             "style": "roundrock"
