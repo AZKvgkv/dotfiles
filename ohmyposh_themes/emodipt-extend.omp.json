@@ -25,7 +25,7 @@
             }
           },
           "style": "plain",
-          "template": " \ue795 {{ .Name }}",
+          "template": " \uf489 {{ .Name }}",
           "type": "shell"
         },
         {
