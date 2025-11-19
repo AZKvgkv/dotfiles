@@ -47,5 +47,6 @@ export-env {
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/amro.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/tokyonight_storm.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/craver.omp.json
-  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/emodipt-extend.omp.json
+  # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/emodipt-extend.omp.json
+  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/velvet.omp.json
 }
