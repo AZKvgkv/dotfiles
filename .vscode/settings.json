@@ -1,5 +1,4 @@
 {
-    "cSpell.words": [
-        "nushell"
-    ]
+  "cSpell.words": ["nushell"],
+  "markdown.validate.enabled": true
 }
