@@ -1,351 +1,66 @@
-add_newline = false
-[character]
-# success_symbol = "[>](bold green)"
-success_symbol = "[\uf124](bold green)" # 
-# success_symbol = "[\ue602](bold green)" # 
-# success_symbol = "[\uf061](bold green)" # 
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# error_symbol = "[x](bold red)"
-# error_symbol = "[ ](bold red)"
-# error_symbol = "[󱣀](bold red)"
-# error_symbol = "[ ](bold red)"
-error_symbol = "[](bold red)"
-
-# vimcmd_symbol = "[<](bold green)"
-vimcmd_symbol = "[\ue62b](bold green)" # 
-# vimcmd_symbol = "[\uf060](bold green)"# 
-
-[git_branch]
-# symbol = " "
-symbol = "[ ](bold yellow)"
-
-[git_commit]
-# tag_symbol = '  '
-# tag_symbol = ' '
-tag_symbol = ' '
-
-# [git_commit]
-# tag_symbol = " tag "
-
-# [git_status]
-# ahead = ">"
-# behind = "<"
-# diverged = "<>"
-# renamed = "r"
-# deleted = "x"
-
-[git_status]
-format = '$all_status$ahead_behind '
-ahead = '[  ](bold purple)'
-behind = '[  ](bold purple)'
-# staged = '[✚](green)'
-staged = '[  ](green)'
-deleted = '[󰆴 ](red)'
-renamed = '[󰭄 ](blue)'
-# stashed = '[✭](cyan)'
-stashed = '[ ](#BA45AE)' # 
-# untracked = '[◼](white)'
-# untracked = '[](bold white)'
-# untracked = '[ ](bold white)'
-# untracked = '[ ](bold white)'
-# untracked = '[ ](#5AA3DB)'
-untracked = '[ ](#5AA3DB)'
-# modified = '[✱](blue) '
-modified = '[ ](#CC936A) '
-conflicted = '[](yellow)'
-diverged = ''
-# up_to_date = ''
-up_to_date = '[ ](green)'
-
-[aws]
-symbol = "aws "
-format = "[$symbol($version )]($style)"
-
-[buf]
-symbol = "buf "
-format = "[$symbol($version )]($style)"
-
-[bun]
-symbol = "bun "
-format = "[$symbol($version )]($style)"
-
-[c]
-# symbol = "C "
-symbol = " "
-format = "[$symbol($version )]($style)"
-
-[cpp]
-symbol = "C++ "
-format = "[$symbol($version )]($style)"
-
-[cobol]
-symbol = "cobol "
-format = "[$symbol($version )]($style)"
-
-[conda]
-symbol = "conda "
-format = "[$symbol($version )]($style)"
-
-[container]
-symbol = "container "
-
-[crystal]
-# symbol = "cr "
-symbol = " "
-format = "[$symbol($version )]($style)"
-
-[cmake]
-symbol = "cmake "
-format = "[$symbol($version )]($style)"
-
-[daml]
-symbol = "daml "
-format = "[$symbol($version )]($style)"
-
-[dart]
-symbol = "dart "
-format = "[$symbol($version )]($style)"
-
-[deno]
-symbol = "deno "
-format = "[$symbol($version )]($style)"
-
-[dotnet]
-symbol = ".NET "
-format = "[$symbol($version )]($style)"
+format = """
+[░▒▓](#a3aed2)\
+[  ](bg:#a3aed2 fg:#090c0c)\
+[](bg:#769ff0 fg:#a3aed2)\
+$directory\
+[](fg:#769ff0 bg:#394260)\
+$git_branch\
+$git_status\
+[](fg:#394260 bg:#212736)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#212736 bg:#1d2230)\
+$time\
+[ ](fg:#1d2230)\
+\n$character"""
 
 [directory]
-# read_only = " ro"
-read_only = ' 🔒'
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-[docker_context]
-symbol = "docker "
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
-[elixir]
-symbol = "exs "
-format = "[$symbol($version )]($style)"
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
 
-[elm]
-symbol = "elm "
-format = "[$symbol($version )]($style)"
-
-[fennel]
-symbol = "fnl "
-format = "[$symbol($version )]($style)"
-
-[fossil_branch]
-symbol = "fossil "
-
-[gcloud]
-symbol = "gcp "
-format = "[$symbol($version )]($style)"
-
-# [git_branch]
-# symbol = "git "
-
-[gleam]
-symbol = "gleam "
-format = "[$symbol($version )]($style)"
-
-[golang]
-symbol = "go "
-format = "[$symbol($version )]($style)"
-
-[gradle]
-symbol = "gradle "
-format = "[$symbol($version )]($style)"
-
-[guix_shell]
-symbol = "guix "
-
-[haskell]
-symbol = "haskell "
-format = "[$symbol($version )]($style)"
-
-[helm]
-symbol = "helm "
-format = "[$symbol($version )]($style)"
-
-[hg_branch]
-symbol = "hg "
-
-[java]
-symbol = "java "
-format = "[$symbol($version )]($style)"
-
-[julia]
-# symbol = "jl "
-symbol = " "
-format = "[$symbol($version )]($style)"
-
-[kotlin]
-symbol = "kt "
-format = "[$symbol($version )]($style)"
-
-[lua]
-symbol = " "
-format = "[$symbol($version )]($style)"
+[git_status]
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 
 [nodejs]
-symbol = "nodejs "
-format = "[$symbol($version )]($style)"
-
-[memory_usage]
-symbol = "memory "
-
-[meson]
-symbol = "meson "
-
-[nats]
-symbol = "nats "
-
-[nim]
-symbol = "nim "
-format = "[$symbol($version )]($style)"
-
-[nix_shell]
-symbol = "nix "
-
-[ocaml]
-symbol = "ml "
-format = "[$symbol($version )]($style)"
-
-[opa]
-symbol = "opa "
-
-[os.symbols]
-AIX = "aix "
-Alpaquita = "alq "
-AlmaLinux = "alma "
-Alpine = "alp "
-Amazon = "amz "
-Android = "andr "
-Arch = "rch "
-Artix = "atx "
-Bluefin = "blfn "
-CachyOS = "cach "
-CentOS = "cent "
-Debian = "deb "
-DragonFly = "dfbsd "
-Emscripten = "emsc "
-EndeavourOS = "ndev "
-Fedora = "fed "
-FreeBSD = "fbsd "
-Garuda = "garu "
-Gentoo = "gent "
-HardenedBSD = "hbsd "
-Illumos = "lum "
-Kali = "kali "
-Linux = "lnx "
-Mabox = "mbox "
-Macos = "mac "
-Manjaro = "mjo "
-Mariner = "mrn "
-MidnightBSD = "mid "
-Mint = "mint "
-NetBSD = "nbsd "
-NixOS = "nix "
-Nobara = "nbra "
-OpenBSD = "obsd "
-OpenCloudOS = "ocos "
-openEuler = "oeul "
-openSUSE = "osuse "
-OracleLinux = "orac "
-Pop = "pop "
-Raspbian = "rasp "
-Redhat = "rhl "
-RedHatEnterprise = "rhel "
-RockyLinux = "rky "
-Redox = "redox "
-Solus = "sol "
-SUSE = "suse "
-Ubuntu = "ubnt "
-Ultramarine = "ultm "
-Unknown = "unk "
-Uos = "uos "
-Void = "void "
-Windows = "win "
-
-[package]
-symbol = "pkg "
-
-[perl]
-symbol = "pl "
-format = "[$symbol($version )]($style)"
-
-[php]
-symbol = "php "
-format = "[$symbol($version )]($style)"
-
-[pijul_channel]
-symbol = "pijul "
-
-[pixi]
-disabled = true # too slowly
-# symbol = "pixi "
-symbol = "pixi 󰏗 "
-format = "[$symbol($version )]($style)"
-
-[pulumi]
-symbol = "pulumi "
-
-[purescript]
-symbol = "purs "
-format = "[$symbol($version )]($style)"
-
-[python]
-# symbol = "py "
-symbol = " "
-format = "[$symbol($version )]($style)"
-
-[quarto]
-symbol = "quarto "
-format = "[$symbol($version )]($style)"
-
-[raku]
-symbol = "raku "
-
-[rlang]
-symbol = "r "
-format = "[$symbol($version )]($style)"
-
-[ruby]
-symbol = "rb "
-format = "[$symbol($version )]($style)"
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [rust]
-# symbol = "rs "
-symbol = "󱘗 "
-format = "[$symbol($version )]($style)"
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
-[scala]
-symbol = "scala "
-format = "[$symbol($version )]($style)"
+[golang]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
-[spack]
-symbol = "spack "
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
-[solidity]
-symbol = "solidity "
-
-[status]
-symbol = "[x](bold red) "
-
-[sudo]
-symbol = "sudo "
-
-[swift]
-symbol = "swift "
-format = "[$symbol($version )]($style)"
-
-[typst]
-symbol = "typst "
-format = "[$symbol($version )]($style)"
-
-[terraform]
-symbol = "terraform "
-
-[zig]
-# symbol = "zig "
-symbol = " "
-format = "[$symbol($version )]($style)"
+[time]
+disabled = false
+time_format = "%R"                                      # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
