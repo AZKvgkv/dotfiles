@@ -30,6 +30,8 @@ export-env {
   let probua_minial = ($omp_theme_path | path join "probua.minimal.omp.json")
   let space = ($omp_theme_path | path join "space.omp.json")
   let spaceship = ($omp_theme_path | path join "spaceship.omp.json")
+  
+  let devious_diamonds = ($omp_theme_path | path join "devious-diamonds.omp.yaml")
 
   # oh-my-posh init nu --config $space
   # oh-my-posh init nu --config $the_unnamed
@@ -38,12 +40,15 @@ export-env {
   # oh-my-posh init nu --config $ys
   # oh-my-posh init nu --config $spaceship
 
+  # oh-my-posh init nu --config $devious_diamonds
+
+
 
   # oh-my-posh init nu --config ~/Application/Scoop/apps/oh-my-posh/current/themes/zash.omp.json
 
   ## az_config
   # let az_omp_path = '~/Develop/dotfiles/ohmyposh_themes/'
-  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/star.omp.json
+  # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/star.omp.json
 
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/sorin.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/onehalf.minimal.omp.json
@@ -52,4 +57,5 @@ export-env {
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/craver.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/emodipt-extend.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/velvet.omp.json
+  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/ys.omp.json
 }

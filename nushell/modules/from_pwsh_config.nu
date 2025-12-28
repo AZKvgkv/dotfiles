@@ -9,10 +9,12 @@ export alias g = git
 export alias ni = touch
 export alias md = mkdir
 
-export alias e = eza -Al
+export alias e = eza --icons
+export alias ee = eza -al --git --icons
+export alias et = eza -ahl --git --icons --tree --level 2
 export alias l = lsd
-export alias ll = lsd -Al
-export alias lt = lsd --tree
+export alias ll = lsd -Al -g
+export alias lt = lsd -l --git --tree
 export alias ltd = lt --depth
 export alias ls = ls -al
 
