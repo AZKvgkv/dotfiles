@@ -5,6 +5,7 @@ sort_by = "natural"
 
 [opener]
 edit = [
-  { run = 'notepad4 %*',    orphan = true, desc = "Notepad4",           for = "windows" },
-  { run = 'notepad4 -w %*', block = true,  desc = "Notepad4 (block)",   for = "windows" },
+#   { run = 'notepad4 %*',    orphan = true, desc = "Notepad4",           for = "windows" },
+#   { run = 'notepad4 -w %*', block = true,  desc = "Notepad4 (block)",   for = "windows" },
+  {run = "vim %*",  block = true, for = "windows"},
 ]
