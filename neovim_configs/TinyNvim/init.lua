@@ -4,7 +4,7 @@ require("az")
 require("telescope").setup({
 	extensions = {
 		fzf = {
-			fuzzy = true, -- 模糊匹配
+			fuzzy = true,
 			override_generic_sorter = true,
 			override_file_sorter = true,
 		},
@@ -12,14 +12,17 @@ require("telescope").setup({
 })
 require("telescope").load_extension("fzf")
 
--- 常用映射
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>f", builtin.find_files)
-vim.keymap.set("n", "<leader>b", builtin.buffers)
-vim.keymap.set("n", "<leader>rg", builtin.live_grep)
+--keymaps for telescope
+-- local builtin = require("telescope.builtin")
+-- vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Telescope find files" })
+-- vim.keymap.set("n", "<leader>g", builtin.live_grep, { desc = "Telescope live_grep" })
+-- vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Telescope buffers" })
+-- vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tags" })
 
 -- theme & transparency
 vim.cmd.colorscheme("unokai")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+
+-- vim.o.showmode = false
