@@ -49,10 +49,12 @@ if (-not (Test-Path env:STARSHIP_SHELL)) {
 ${function:az} = {ns az $args}
 ${function:tt} = {ns tv $args}
 
-${function:e} = { eza -Al $args }
+${function:e} = { eza  --icons $args }
+${function:ee} = { eza -al --git --icons $args }
+${function:et} = { eza -ahl --git --icons --tree --level 2 $args }
 ${function:l} = { lsd $args }
-${function:ll} = { lsd -Al $args }
-${function:lt} = { lsd --tree $args }
+${function:ll} = { lsd -Al -g $args }
+${function:lt} = { lsd -l --git --tree $args }
 ${function:ltd} = { lt --depth $args }
 function y {
     $tmp = (New-TemporaryFile).FullName
@@ -152,11 +154,11 @@ Set-PSReadLineOption -EditMode Emacs `
 #Get-Content "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" |
 #    Sort-Object -Unique |
 #    Set-Content "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
-
+    
 
 # 快捷键设置 (批量设置)
 @{
-#    'Tab' = 'Complete'
+    'Tab' = 'Complete'
     'Ctrl+d' = 'MenuComplete'
     'Ctrl+z' = 'Undo'
     'UpArrow' = 'HistorySearchBackward'
@@ -175,7 +177,10 @@ $null = Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -MaxTriggerCoun
 	# PSReadLine 和 Fzf 的延迟加载
     Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
     Set-PSReadLineKeyHandler -Key Alt+c -ScriptBlock { Invoke-FuzzySetLocation }
-    Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+    
+    # TODO：待修复
+    # Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion } 
+    
     
 	# DirColors 和 Terminal-Icons 仅在需要时加载
     # 监听 ls 和 lsd -l 等命令来延迟加载模块
