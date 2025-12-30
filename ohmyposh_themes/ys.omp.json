@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "options": {
+            "fetch_version": true
+          },
+          "template": "({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }})",
+          "foreground": "white",
+          "type": "python",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": "# ",
+          "foreground": "lightBlue",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "template": " % ",
+          "foreground": "red",
+          "type": "root",
+          "style": "plain"
+        },
+        {
+          "template": "<cyan>{{ .UserName }}</> <darkGray>@</> <green>{{ .HostName }}</> ",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "style": "full"
+          },
+          "template": "<darkGray>in </>{{ .Path }} ",
+          "foreground": "lightYellow",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "options": {
+            "fetch_status": true
+          },
+          "template": "<darkGray>on</> <#68DA99>git: </><cyan>{{ .HEAD | replace \"v\" \" v\" }}</>{{ if .Working.Changed }}<red> x</>{{ end }} ",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "template": "[{{ .CurrentDate | date .Format }}]",
+          "foreground": "darkGray",
+          "type": "time",
+          "style": "plain"
+        },
+        {
+          "template": " C:{{ if gt .Code 0 }}{{ .Code }}{{ end }} ",
+          "foreground": "red",
+          "type": "status",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "template": "$",
+          "foreground": "lightRed",
+          "type": "text",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 4,
+  "final_space": true
+}
