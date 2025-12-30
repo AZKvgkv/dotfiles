@@ -3,6 +3,8 @@ local opts = {
 	noremap = true,
 	silent = true,
 }
+local builtin = require("telescope.builtin")
+local theme = require("telescope.themes")
 
 map("n", "<leader>e", vim.cmd.Ex)
 map("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
@@ -29,8 +31,12 @@ map("n", "<C-Down>", ":resize -2<CR>", { desc = "Decrease window height" })
 map("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
 map("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Increase window width" })
 
---telescope
-local builtin = require("telescope.builtin")
+-- Telescope
+-- new layout
+map("n", "<leader>f", function()
+	builtin.find_files(theme.get_ivy())
+end, { desc = "[F]ind [F]iles (ivy)" })
+
 map("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 map("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 map("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
@@ -61,4 +67,4 @@ map("n", "<leader>sn", function()
 	builtin.find_files({
 		cwd = vim.fn.stdpath("config"),
 	})
-end, { desc = "'[S]earch [N]eovim Files" })
+end, { desc = "'[S]earch neovim [C]onfig Files" })

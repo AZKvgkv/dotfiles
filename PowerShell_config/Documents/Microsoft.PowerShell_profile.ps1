@@ -48,6 +48,10 @@ if (-not (Test-Path env:STARSHIP_SHELL)) {
 # 自定义函数
 ${function:az} = {ns az $args}
 ${function:tt} = {ns tv $args}
+${function:lz} = {ns lz $args}
+${function:kk} = {ns kk $args}
+${function:nc} = {ns nc $args}
+${function:as} = {ns as $args}
 
 ${function:e} = { eza  --icons $args }
 ${function:ee} = { eza -al --git --icons $args }
