@@ -10,7 +10,8 @@ local config = wezterm.config_builder()
 -- config.color_scheme = 'CutiePro'
 -- config.color_scheme = "Material Darker (base16)"
 
-config.color_scheme = 'Darcula (base16)'
+-- config.color_scheme = 'Darcula (base16)'
+config.color_scheme = 'darkmoss (base16)'
 
 
 -- local function scheme_for_appearance(appearance)
@@ -28,12 +29,12 @@ config.color_scheme = 'Darcula (base16)'
 -- config.color_scheme = color_scheme
 
 config.window_decorations = "RESIZE"
-config.use_fancy_tab_bar = true
+config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
 config.show_tab_index_in_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 config.show_close_tab_button_in_tabs = false
-
+-- config.tab_bar_at_bottom = true
 
 config.inactive_pane_hsb = {
     saturation = 0.9,
@@ -70,7 +71,7 @@ config.default_prog = {
     "nu",
 }
 
--- todo
+-- todo tab_bar_style
 config.window_frame = {
     font = wezterm.font({
         family = "Consolas",
@@ -85,7 +86,6 @@ config.colors = {
         inactive_tab_edge = "#575757",
     },
 }
-
 -------------------- 键盘绑定 --------------------
 local act = wezterm.action
 
@@ -133,12 +133,12 @@ for _, m in ipairs(custom_map) do
     table.insert(config.keys, m)
 end
 
--- todo 这里只写一个 Mod 是可以的
 for i = 1, 8 do
+    -- CTRL+ALT + number to activate that tab + 1
     table.insert(config.keys, {
         key = tostring(i),
-        mods = "ALT",
-        action = act.ActivateTab(i - 1),
+        mods = 'CTRL|ALT',
+        action = act.ActivateTab(i - 2),
     })
 end
 
