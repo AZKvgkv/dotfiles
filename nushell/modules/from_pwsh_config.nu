@@ -44,6 +44,37 @@ export def copypath [path?: string] {
   print $"($abs) copied to clipboard."
 }
 
+# =========================================================
+# Custom neovim configs
+export def az [...reset] {
+    with-env {NVIM_APPNAME: az_nvim} {nvim ...$reset}
+}
+export def astro [...reset] {
+    with-env {NVIM_APPNAME: AstroNvim} {nvim ...$reset}
+}
+export def kick [...reset] {
+    with-env {NVIM_APPNAME: KickStart} {nvim ...$reset}
+}
+export def nvchad [...reset] {
+    with-env {NVIM_APPNAME: NvChad} {nvim ...$reset}
+}
+export def lazy [...reset] {
+    with-env {NVIM_APPNAME: LazyVim} {nvim ...$reset}
+}
+export def tiny [...reset] {
+    with-env {NVIM_APPNAME: TinyNvim} {nvim ...$reset}
+}
+export def mini [...reset] {
+    with-env {NVIM_APPNAME: nvim-minimax} {nvim ...$reset}
+}
+
+export alias as = astro
+export alias kk = kick
+export alias nc = nvchad
+export alias lz = lazy
+export alias tt = tiny
+# =========================================================
+
 # TODO
 # nvim_configs
 # let nvimConfigNames = {
