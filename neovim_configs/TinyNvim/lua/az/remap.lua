@@ -6,7 +6,12 @@ local opts = {
 local builtin = require("telescope.builtin")
 local theme = require("telescope.themes")
 
-map("n", "<leader>e", vim.cmd.Ex)
+-- map("n", "<leader>e", vim.cmd.Ex) -- 使用 oil.nvim 替换 netrw
+
+-- Open parent directory in current window
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+map("n", "<space>-", require("oil").toggle_float)
+
 map("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 map("i", "jk", "<Esc>", opts)
 
