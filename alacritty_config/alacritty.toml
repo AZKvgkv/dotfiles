@@ -47,10 +47,10 @@ unfocused_hollow = true
 
 
 [font]
-normal.family = "FiraCode Nerd Font"
-bold.family = "FiraCode Nerd Font"
-italic.family = "FiraCode Nerd Font"
-bold_italic.family = "FiraCode Nerd Font"
+normal.family = "CommitMono Nerd Font"
+bold.family = "CommitMono Nerd Font"
+italic.family = "CommitMono Nerd Font"
+bold_italic.family = "CommitMono Nerd Font"
 
 size = 14.0
 
@@ -85,18 +85,26 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 program = "nu"
 
 [window]
-opacity = 0.85
+opacity = 0.65
 
 padding.x = 0
 padding.y = 0
 
-decorations = "Full"
-#decorations = "None"
-title = "Az~Alacritty"
-dynamic_title = false
+decorations = "None"
+
+# decorations = "Full"
+# title = "Az~Alacritty"
+# dynamic_title = false
 
 decorations_theme_variant = "Dark"
 
 [window.dimensions]
 columns = 100
 lines = 25
+
+[keyboard]
+bindings = [
+  { key = "q", mods = "Alt", action = "Quit" },
+  { key = "v", mods = "Alt", action = "ToggleViMode" },
+  { key = "v", mods = "Control", action = "Paste" },
+]
