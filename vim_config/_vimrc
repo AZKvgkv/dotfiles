@@ -102,12 +102,12 @@ call plug#begin()
 call plug#end()
 
 " ========== colorscheme ==========
-" colorscheme gruvbox
-" let g:airline_theme = "gruvbox"
-let g:tokyonight_style = 'storm' 
-let g:tokyonight_enable_italic = 1
-let g:airline_theme = "tokyonight"
-colorscheme tokyonight
+colorscheme gruvbox
+let g:airline_theme = "gruvbox"
+" let g:tokyonight_style = 'storm' 
+" let g:tokyonight_enable_italic = 1
+" let g:airline_theme = "tokyonight"
+" colorscheme tokyonight
 let g:airline#extensions#tabline#enabled = 1 " 让 buffer 显示在顶部
 let g:airline_powerline_fonts = 1
 

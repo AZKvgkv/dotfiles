@@ -9,14 +9,14 @@ if (-not (Test-Path env:STARSHIP_SHELL))
 
     Invoke-Expression (& { (zoxide init powershell | Out-String) })
     Invoke-Expression (&scoop-search --hook)
+    Import-Module -Name CompletionPredictor
+    Import-Module gsudoModule
 }
 
-${function:az} = {ns az $args}
-${function:tt} = {ns tv $args}
-${function:lz} = {ns lz $args}
-${function:kk} = {ns kk $args}
-${function:nc} = {ns nc $args}
-${function:as} = {ns as $args}
+${function:m} = { micro $args }
+${function:g} = { git $args }
+${function:vi} = { vim $args }
+
 ${function:e} = { eza  --icons $args }
 ${function:ee} = { eza -al --git --icons $args }
 ${function:et} = { eza -ahl --git --icons --tree --level 2 $args }
@@ -24,6 +24,11 @@ ${function:l} = { lsd $args }
 ${function:ll} = { lsd -Al -g $args }
 ${function:lt} = { lsd -l --git --tree $args }
 ${function:ltd} = { lt --depth $args }
+
+function n {
+    $env:NVIM_APPNAME = "nvim"
+    nvim $args
+}
 
 function y
 {
@@ -36,14 +41,10 @@ function y
     }
     Remove-Item -Path $tmp
 }
+
 @{
-    'vi' = 'vim'
-    'n' = 'nvim'
     'c' = 'cls'
-    'o' = 'gvim'
     'f' = 'fastfetch'
-    'm' = 'micro'
-    'g' = 'git'
     'gds' = 'Get-DirectorySize'
     'copyfile' = 'Copy-FileContentToClipboard'
     'copypath' = 'Copy-Path'
@@ -57,8 +58,17 @@ $script:nvimConfigNames = @{
     "nc" = "NvChad"
     "kk" = "KickStart"
     "lz" = "LazyVim"
-    "nv" = "nvim"
-    "tv" = "TinyNvim"
+    "tt" = "TinyNvim"
+}
+
+ForEach ($kv in $script:nvimConfigNames.GetEnumerator()){
+    $key = $kv.Key
+    $value = $kv.Value
+    $funcBody = @"
+    `$env:NVIM_APPNAME = "$value"
+    nvim `$args
+"@
+Invoke-Expression "function global:$key {$funcBody}"
 }
 
 function ns
@@ -90,8 +100,6 @@ function ns
     Write-Host "Invalid config name. Available options are: $($script:nvimConfigNames.Values -join ', ')"
 }
 
-Import-Module -Name CompletionPredictor
-Import-Module gsudoModule
 Set-PSReadLineOption -EditMode Emacs `
     -PredictionSource HistoryAndPlugin `
     -PredictionViewStyle ListView `
