@@ -99,8 +99,8 @@ decorations = "None"
 decorations_theme_variant = "Dark"
 
 [window.dimensions]
-columns = 100
-lines = 25
+columns = 135
+lines = 40
 
 [keyboard]
 bindings = [
