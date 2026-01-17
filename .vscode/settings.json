@@ -1,4 +1,5 @@
 {
   "cSpell.words": ["nushell"],
-  "markdown.validate.enabled": true
+  "markdown.validate.enabled": true,
+  "Lua.diagnostics.globals": ["console"]
 }

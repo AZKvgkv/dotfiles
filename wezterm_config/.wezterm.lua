@@ -7,12 +7,14 @@ local config = wezterm.config_builder()
 -- config.color_scheme = "Batman"
 -- config.color_scheme = "Atom"
 -- config.color_scheme = "Apple System Colors"
--- config.color_scheme = 'CutiePro'
+config.color_scheme = 'CutiePro'
 -- config.color_scheme = "Material Darker (base16)"
 
 -- config.color_scheme = 'Darcula (base16)'
-config.color_scheme = 'darkmoss (base16)'
+-- config.color_scheme = 'darkmoss (base16)'
 
+
+-- config.color_scheme = 'Catppuccin Mocha'
 
 -- local function scheme_for_appearance(appearance)
 --     return appearance:find("Dark") and "Catppuccin Mocha" or "Catppuccin Latte"
@@ -67,9 +69,15 @@ config.max_fps = 120
 -- 	"-NoLogo",
 -- }
 
-config.default_prog = {
-    "nu",
-}
+-- nushell
+-- config.default_prog = {
+--     "nu",
+-- }
+
+-- wsl
+config.default_prog = { 'wsl', '-d', 'openSUSE-Tumbleweed', '--cd', '~' }
+config.cursor_blink_rate = 0
+
 
 -- todo tab_bar_style
 config.window_frame = {
