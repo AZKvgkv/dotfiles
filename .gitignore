@@ -21,5 +21,6 @@ PowerShell_config/Documents/*_old*
 PowerShell_config/Documents/Modules/Az*
 PowerShell_config/Documents/Modules/Completion*
 PowerShell_config/Documents/Modules/Microsoft*
+PowerShell_config/Documents/Modules/PSC*
 
 todo.md
