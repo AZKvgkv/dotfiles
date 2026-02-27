@@ -1,3 +1,7 @@
+Set-PSReadLineOption -EditMode Emacs
+
+Import-Module PSCompletions
+
 # starship config
 if (-not (Test-Path env:STARSHIP_SHELL))
 {
@@ -30,16 +34,14 @@ function n {
     nvim $args
 }
 
-function y
-{
-    $tmp = (New-TemporaryFile).FullName
-    yazi $args --cwd-file="$tmp"
-    $cwd = Get-Content -Path $tmp -Encoding UTF8
-    if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path)
-    {
-        Set-Location -LiteralPath (Resolve-Path -LiteralPath $cwd).Path
-    }
-    Remove-Item -Path $tmp
+function y {
+	$tmp = (New-TemporaryFile).FullName
+	yazi.exe $args --cwd-file="$tmp"
+	$cwd = Get-Content -Path $tmp -Encoding UTF8
+	if ($cwd -ne $PWD.Path -and (Test-Path -LiteralPath $cwd -PathType Container)) {
+		Set-Location -LiteralPath (Resolve-Path -LiteralPath $cwd).Path
+	}
+	Remove-Item -Path $tmp
 }
 
 @{
@@ -100,8 +102,7 @@ function ns
     Write-Host "Invalid config name. Available options are: $($script:nvimConfigNames.Values -join ', ')"
 }
 
-Set-PSReadLineOption -EditMode Emacs `
-    -PredictionSource HistoryAndPlugin `
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin `
     -PredictionViewStyle ListView `
     -HistoryNoDuplicates:$true `
     -AddToHistoryHandler {
@@ -121,15 +122,15 @@ Set-PSReadLineOption -EditMode Emacs `
     return $true
 }
 
-@{
-    'Tab' = 'Complete'
-    'Ctrl+d' = 'MenuComplete'
-    'Ctrl+z' = 'Undo'
-    'UpArrow' = 'HistorySearchBackward'
-    'DownArrow' = 'HistorySearchForward'
-}.GetEnumerator() | ForEach-Object {
-    Set-PSReadLineKeyHandler -Key $_.Key -Function $_.Value
-}
+# @{
+#     'Tab' = 'Complete'
+#     'Ctrl+d' = 'MenuComplete'
+#     'Ctrl+z' = 'Undo'
+#     'UpArrow' = 'HistorySearchBackward'
+#     'DownArrow' = 'HistorySearchForward'
+# }.GetEnumerator() | ForEach-Object {
+#     Set-PSReadLineKeyHandler -Key $_.Key -Function $_.Value
+# }
 
 $uvCompletionPath = "$env:LOCALAPPDATA\uv-completion.ps1"
 $null = Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -MaxTriggerCount 1 -Action {
