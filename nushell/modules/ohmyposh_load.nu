@@ -34,14 +34,17 @@ export-env {
 
   let devious_diamonds = ($omp_theme_path | path join "devious-diamonds.omp.yaml")
 
+  let material = ($omp_theme_path | path join "material.omp.json")
+
   # oh-my-posh init nu --config $space
   # oh-my-posh init nu --config $the_unnamed
   # oh-my-posh init nu --config $star
   # oh-my-posh init nu --config $avit
   # oh-my-posh init nu --config $ys
   # oh-my-posh init nu --config $spaceship
+  # oh-my-posh init nu --config $pure
 
-  # oh-my-posh init nu --config $devious_diamonds
+  # oh-my-posh init nu --config $material
 
 
 
@@ -51,7 +54,7 @@ export-env {
   # let az_omp_path = '~/Develop/dotfiles/ohmyposh_themes/'
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/star.omp.json
 
-  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/sorin.omp.json
+  # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/sorin.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/onehalf.minimal.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/amro.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/tokyonight_storm.omp.json
@@ -59,4 +62,5 @@ export-env {
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/emodipt-extend.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/velvet.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/ys.omp.json
+  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/material.omp.json
 }

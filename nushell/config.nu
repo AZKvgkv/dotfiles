@@ -7,5 +7,7 @@ source ~/.zoxide.nu
 # Initialize oh-my-posh.nu at shell startup by adding this line in your config.nu file
 source ~/.oh-my-posh.nu
 
-# Init atuin
-source ./modules/atuin/init.nu
+
+# television config
+# mkdir ($nu.data-dir | path join "vendor/autoload")
+# tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")
