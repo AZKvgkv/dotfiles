@@ -1,4 +1,7 @@
-Set-PSReadLineOption -EditMode Emacs
+. "$PSScriptRoot\tv_config.ps1"
+
+
+# Set-PSReadLineOption -EditMode Emacs
 
 Import-Module PSCompletions
 
@@ -135,7 +138,7 @@ Set-PSReadLineOption -PredictionSource HistoryAndPlugin `
 $uvCompletionPath = "$env:LOCALAPPDATA\uv-completion.ps1"
 $null = Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -MaxTriggerCount 1 -Action {
 
-    Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+    # Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
     Set-PSReadLineKeyHandler -Key Alt+c -ScriptBlock { Invoke-FuzzySetLocation }
 
     if (-not (Test-Path $uvCompletionPath))
