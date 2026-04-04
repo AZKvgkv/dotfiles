@@ -10,7 +10,7 @@ local theme = require("telescope.themes")
 
 -- Open parent directory in current window
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-map("n", "<space>-", require("oil").toggle_float)
+map("n", "<space>-", require("oil").toggle_float, { desc = "Open Oil FileManger" })
 
 map("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 map("i", "jk", "<Esc>", opts)
@@ -29,8 +29,8 @@ map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 
 -- Splitting & Resizing
-map("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
-map("n", "<leader>sh", ":split<CR>", { desc = "Split window horizontally" })
+map("n", "<leader>sv", ":vsplit<CR>", { desc = "[S]plit window vertically" })
+map("n", "<leader>s-", ":split<CR>", { desc = "[S]plit window horizontally" })
 map("n", "<C-Up>", ":resize +2<CR>", { desc = "Increase window height" })
 map("n", "<C-Down>", ":resize -2<CR>", { desc = "Decrease window height" })
 map("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
@@ -65,11 +65,11 @@ map("n", "<leader>s/", function()
 		grep_open_files = true,
 		prompt_title = "Live Grep in Open Files",
 	})
-end, { desc = "'[S]earch [/] in Open Files" })
+end, { desc = "[S]earch [/] in Open Files" })
 
 -- Shortcut for searching neovim configuration files
 map("n", "<leader>sn", function()
 	builtin.find_files({
 		cwd = vim.fn.stdpath("config"),
 	})
-end, { desc = "'[S]earch neovim [C]onfig Files" })
+end, { desc = "[S]earch neovim [C]onfig Files" })
