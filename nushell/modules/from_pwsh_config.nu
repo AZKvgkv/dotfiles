@@ -46,9 +46,6 @@ export def copypath [path?: string] {
 
 # =========================================================
 # Custom neovim configs
-export def az [...reset] {
-    with-env {NVIM_APPNAME: az_nvim} {nvim ...$reset}
-}
 export def astro [...reset] {
     with-env {NVIM_APPNAME: AstroNvim} {nvim ...$reset}
 }
@@ -58,11 +55,8 @@ export def kick [...reset] {
 export def nvchad [...reset] {
     with-env {NVIM_APPNAME: NvChad} {nvim ...$reset}
 }
-export def lazy [...reset] {
-    with-env {NVIM_APPNAME: LazyVim} {nvim ...$reset}
-}
 export def tiny [...reset] {
-    with-env {NVIM_APPNAME: TinyNvim} {nvim ...$reset}
+    with-env {NVIM_APPNAME: azNvim} {nvim ...$reset}
 }
 export def mini [...reset] {
     with-env {NVIM_APPNAME: nvim-minimax} {nvim ...$reset}

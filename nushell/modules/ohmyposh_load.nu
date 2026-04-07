@@ -45,6 +45,7 @@ export-env {
   # oh-my-posh init nu --config $pure
 
   # oh-my-posh init nu --config $material
+  oh-my-posh init nu --config $avit
 
 
 
@@ -62,5 +63,5 @@ export-env {
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/emodipt-extend.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/velvet.omp.json
   # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/ys.omp.json
-  oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/material.omp.json
+  # oh-my-posh init nu --config ~/Develop/dotfiles/ohmyposh_themes/material.omp.json
 }
