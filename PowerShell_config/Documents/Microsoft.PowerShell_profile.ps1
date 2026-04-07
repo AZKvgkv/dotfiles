@@ -1,24 +1,42 @@
-. "$PSScriptRoot\tv_config.ps1"
+# . "$PSScriptRoot\tv_config.ps1"
 
 
-# Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -EditMode Emacs
 
-Import-Module PSCompletions
+Invoke-Expression (&scoop-search --hook)
 
 # starship config
-if (-not (Test-Path env:STARSHIP_SHELL))
-{
-    $starshipCmd = Get-Command starship -ErrorAction SilentlyContinue
-    if ($starshipCmd)
-    {
-        & $starshipCmd init powershell --print-full-init | Out-String | Invoke-Expression
-    }
+# if (-not (Test-Path env:STARSHIP_SHELL))
+# {
+#     $starshipCmd = Get-Command starship -ErrorAction SilentlyContinue
+#     if ($starshipCmd)
+#     {
+#         & $starshipCmd init powershell --print-full-init | Out-String | Invoke-Expression
+#     }
+#
+#     Invoke-Expression (& { (zoxide init powershell | Out-String) })
+#     Invoke-Expression (&scoop-search --hook)
+#     Import-Module -Name CompletionPredictor
+#     Import-Module gsudoModule
+# }
 
-    Invoke-Expression (& { (zoxide init powershell | Out-String) })
-    Invoke-Expression (&scoop-search --hook)
-    Import-Module -Name CompletionPredictor
-    Import-Module gsudoModule
+# ===== Starship - config =====
+if (-not (Test-Path env:STARSHIP_SHELL)) {
+    $starshipCmd = Get-Command starship -ErrorAction SilentlyContinue
+    if ($starshipCmd) {
+        Invoke-Expression (&starship init powershell)
+    }
 }
+
+function z {
+    if (-not (Get-Command __zoxide_z -ErrorAction SilentlyContinue)) {
+        # Write-Host "Initializing zoxide for the first time..." -ForegroundColor Yellow
+        Write-Host "Hello Zoxide..." -ForegroundColor Yellow
+        Invoke-Expression (& { (zoxide init powershell | Out-String) })
+    }
+    __zoxide_z @args
+}
+
 
 ${function:m} = { micro $args }
 ${function:g} = { git $args }
@@ -28,12 +46,42 @@ ${function:e} = { eza  --icons $args }
 ${function:ee} = { eza -al --git --icons $args }
 ${function:et} = { eza -ahl --git --icons --tree --level 2 $args }
 ${function:l} = { lsd $args }
-${function:ll} = { lsd -Al -g $args }
+${function:ll} = { lsd -al -g $args }
 ${function:lt} = { lsd -l --git --tree $args }
 ${function:ltd} = { lt --depth $args }
 
 function n {
     $env:NVIM_APPNAME = "nvim"
+    nvim $args
+}
+
+function mm {
+    $env:NVIM_APPNAME = "mvim"
+    nvim $args
+}
+
+function kk {
+    $env:NVIM_APPNAME = "KickStart"
+    nvim $args
+}
+
+function as {
+    $env:NVIM_APPNAME = "AstroNvim"
+    nvim $args
+}
+
+function nc {
+    $env:NVIM_APPNAME = "NvChad"
+    nvim $args
+}
+
+function max {
+    $env:NVIM_APPNAME = "nvim-minimax"
+    nvim $args
+}
+
+function tt {
+    $env:NVIM_APPNAME = "azNvim"
     nvim $args
 }
 
@@ -59,11 +107,8 @@ function y {
 
 $script:nvimConfigNames = @{
     "as" = "AstroNvim"
-    "az" = "az_nvim"
     "nc" = "NvChad"
     "kk" = "KickStart"
-    "lz" = "LazyVim"
-    "tt" = "TinyNvim"
 }
 
 ForEach ($kv in $script:nvimConfigNames.GetEnumerator()){
@@ -138,7 +183,8 @@ Set-PSReadLineOption -PredictionSource HistoryAndPlugin `
 $uvCompletionPath = "$env:LOCALAPPDATA\uv-completion.ps1"
 $null = Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -MaxTriggerCount 1 -Action {
 
-    # Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+    Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+    # Set-PsFzfOption -PSReadlineChordReverseHistory 'Ctrl+r'
     Set-PSReadLineKeyHandler -Key Alt+c -ScriptBlock { Invoke-FuzzySetLocation }
 
     if (-not (Test-Path $uvCompletionPath))
@@ -146,6 +192,11 @@ $null = Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -MaxTriggerCoun
         uv generate-shell-completion powershell | Out-File -Encoding UTF8 $uvCompletionPath
     }
     . $uvCompletionPath
+
+    # 懒加载模块
+    Import-Module PSCompletions -ErrorAction SilentlyContinue
+    Import-Module CompletionPredictor -ErrorAction SilentlyContinue
+    Import-Module gsudoModule -ErrorAction SilentlyContinue
 }
 
 
@@ -196,3 +247,6 @@ ${function:Copy-Path} = {
     $AbsolutePath | Set-Clipboard
     Write-Host "`e[1m$AbsolutePath`e[0m copied to clipboard."
 }.GetNewClosure()
+
+# mise config
+# (&mise activate pwsh) | Out-String | Invoke-Expression

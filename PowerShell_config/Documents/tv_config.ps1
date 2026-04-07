@@ -317,6 +317,6 @@ Set-PSReadLineKeyHandler -Chord 'Ctrl+t' -ScriptBlock {
     Invoke-TvSmartAutocomplete
 }
 
-Set-PSReadLineKeyHandler -Chord 'Ctrl+r' -ScriptBlock {
-    Invoke-TvShellHistory
-}
+# Set-PSReadLineKeyHandler -Chord 'Ctrl+r' -ScriptBlock {
+#     Invoke-TvShellHistory
+# }
