@@ -5,6 +5,11 @@ Set-PSReadLineOption -EditMode Emacs
 
 Invoke-Expression (&scoop-search --hook)
 
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+# enable psc
+Import-Module PSCompletions -ErrorAction SilentlyContinue
+
 # starship config
 # if (-not (Test-Path env:STARSHIP_SHELL))
 # {
@@ -28,14 +33,14 @@ if (-not (Test-Path env:STARSHIP_SHELL)) {
     }
 }
 
-function z {
-    if (-not (Get-Command __zoxide_z -ErrorAction SilentlyContinue)) {
-        # Write-Host "Initializing zoxide for the first time..." -ForegroundColor Yellow
-        Write-Host "Hello Zoxide..." -ForegroundColor Yellow
-        Invoke-Expression (& { (zoxide init powershell | Out-String) })
-    }
-    __zoxide_z @args
-}
+# function z {
+#     if (-not (Get-Command __zoxide_z -ErrorAction SilentlyContinue)) {
+#         # Write-Host "Initializing zoxide for the first time..." -ForegroundColor Yellow
+#         Write-Host "Hello Zoxide..." -ForegroundColor Yellow
+#         Invoke-Expression (& { (zoxide init powershell | Out-String) })
+#     }
+#     __zoxide_z @args
+# }
 
 
 ${function:m} = { micro $args }
@@ -194,7 +199,7 @@ $null = Register-EngineEvent -SourceIdentifier PowerShell.OnIdle -MaxTriggerCoun
     . $uvCompletionPath
 
     # 懒加载模块
-    Import-Module PSCompletions -ErrorAction SilentlyContinue
+    # Import-Module PSCompletions -ErrorAction SilentlyContinue
     Import-Module CompletionPredictor -ErrorAction SilentlyContinue
     Import-Module gsudoModule -ErrorAction SilentlyContinue
 }
